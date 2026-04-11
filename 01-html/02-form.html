@@ -5,10 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Exercise 02 - Form</title>
+    <style>
+      fieldset {
+        margin: 0;
+        border: none;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <main>
-      <!-- Add your code here -->
+      <h1>Roth IRA Calculator</h1>
+      <form action="/submitform">
+        <div>
+          <!--these inputs *should* be numbers, even if they aren't in the
+          screenshot...-->
+          <label for="balance">Balance ($)</label><br />
+          <input type="number" id="balance" name="balance" />
+        </div>
+        <br />
+        <div>
+          <label for="annual">Annual contribution ($)</label><br />
+          <input type="number" id="annual" name="annual" />
+        </div>
+        <br />
+        <fieldset>
+          <legend>Maximize contributions?</legend>
+
+          <input type="radio" id="maximize-yes" name="maximize" value="yes" />
+          <label for="maximize-yes">Yes</label>
+
+          <input type="radio" id="maximize-no" name="maximize" value="no" />
+          <label for="maximize-no">No</label>
+        </fieldset>
+        <br />
+        <div>
+          <label for="rate">Expected rate of return (%)</label>
+          <br />
+          <input type="number" id="rate" name="rate" />
+        </div>
+        <br />
+        <div>
+          <label for="age">Current age</label>
+          <br />
+          <input type="number" id="age" name="age" />
+        </div>
+        <br />
+        <div>
+          <input type="submit" value="Calculate" />
+          <!--the reset input seems to default to having the right text-->
+          <input type="reset" />
+        </div>
+      </form>
+      <p>
+        This exercise is a simplified version of the Roth IRA Caluclator at
+        <!--I found the specific calculator page, so I'll link to that.-->
+        <a href="https://www.calculator.net/roth-ira-calculator.html"
+          >Calculator.net</a
+        >
+      </p>
     </main>
   </body>
 </html>
